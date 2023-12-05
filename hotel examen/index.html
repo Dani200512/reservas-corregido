@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani Gestion de Reservas  -  Hotel Nueva Vida</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+    <header>
+        <h1>Hotel Nueva vida - Dani  Reservas</h1>
+    </header>
+        <ul class="navegacion">
+        <li><a href="#Reservas" class="nav-link">Reservas</a></li>
+        <li><a href="#Clientes" class="nav-link">Clientes</a></li>
+        <li><a href="#Administracion" class="nav-link">Administración</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <button class="menu-Dani" id="menu-Dani">
+        <ion-icon class="barras" name="menu-outline"></ion-icon>
+        </button>
+        </nav>
+
+        <div id="reservas">
+            <h2>Reservas</h2>
+        
+            <div id="formularioClienteIndividual">
+                <h3>Cliente Individual</h3>
+                <form>
+                    <!-- Campos específicos para clientes individuales -->
+                    <label for="tipoHabitacionIndividual">Tipo de Habitación:</label>
+                    <select id="tipoHabitacionIndividual" name="tipoHabitacionIndividual">
+                        <option value="dormir">Dormir únicamente</option>
+                        <option value="mediaPension">Media Pensión</option>
+                        <option value="pensionCompleta">Pensión Completa</option>
+                    </select>
+        
+                    <label for="solicitudMostradorIndividual">Solicitar en mostrador:</label>
+                    <input type="checkbox" id="solicitudMostradorIndividual" name="solicitudMostradorIndividual">
+        
+                    <label for="solicitudNoFumadoresIndividual">Solicitar habitación para no fumadores:</label>
+                    <input type="checkbox" id="solicitudNoFumadoresIndividual" name="solicitudNoFumadoresIndividual">
+        
+                    <label for="fechaLlegadaIndividual">Fecha de Llegada:</label>
+                    <input type="date" id="fechaLlegadaIndividual" name="fechaLlegadaIndividual" required>
+        
+                    <label for="tarjetaCreditoIndividual">Número de Tarjeta de Crédito:</label>
+                    <input type="text" id="tarjetaCreditoIndividual" name="tarjetaCreditoIndividual" required>
+        
+                    <button type="submit">Realizar Reserva</button>
+                </form>
+            </div>
+        
+            <div id="formularioClienteEmpresa">
+                <h3>Cliente Empresa</h3>
+                <form>
+                    <label for="tipoHabitacionEmpresa">Tipo de Habitación:</label>
+                    <select id="tipoHabitacionEmpresa" name="tipoHabitacionEmpresa">
+                        <option value="dormir">Dormir únicamente</option>
+                        <option value="mediaPension">Media Pensión</option>
+                        <option value="pensionCompleta">Pensión Completa</option>
+                    </select>
+        
+                    <label for="fechaLlegadaEmpresa">Fecha de Llegada:</label>
+                    <input type="date" id="fechaLlegadaEmpresa" name="fechaLlegadaEmpresa" required>
+        
+
+        
+                    <button type="submit">Realizar Reserva</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <div id="clientes">
+            <h2>Clientes</h2>
+        
+            <div id="detallesReserva">
+                <h3>Detalles de la Reserva</h3>
+                <p>Fecha de llegada: [Fecha]</p>
+                <p>Tipo de habitación: [Tipo]</p>
+                
+            </div>
+        
+            <div id="procesamientoLlegada">
+                <h3>Procesamiento de Llegada</h3>
+                <p>Cliente llegó al hotel.</p>
+                <p>Se está procesando la reserva...</p>
+                
+            </div>
+        
+            <div id="solicitudesEspeciales">
+                <h3>Solicitudes Especiales</h3>
+                <p>Solicitar habitación en mostrador: [Sí/No]</p>
+                <p>Solicitar habitación para no fumadores: [Sí/No]</p>
+                
+            </div>
+        </div>
+        
+        <div id="administracion">
+            <h2>Administración</h2>
+        
+            <div id="roles">
+                <div id="gerente">
+                    <h3>Gerente</h3>
+                    <p>Se encarga de gestionar cuentas de empresas:</p>
+                    <ul>
+                        <li>Tipo de descuento por habitación</li>
+                        <li>Apertura de cuenta</li>
+                        <li>Cierre de cuenta</li>
+                    </ul>
+                </div>
+        
+                <div id="administrador">
+                    <h3>Administrador</h3>
+                    <p>Se encarga de efectuar mantenimiento sobre la información:</p>
+                    <ul>
+                        <li>Actualización de datos</li>
+                        <li>Respaldo y restauración del sistema</li>
+                  
+                    </ul>
+                </div>
+        
+                <div id="empleados">
+                    <h3>Empleados de Mostrador</h3>
+                    <p>Se encargan de la gestión de clientes.</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    
+
+    <section class="contacto" id="contacto">
+        <h2>Contactame</h2> <div id="contacto"> 
+      <div id="informacionContacto">
+                <h3>Información de Contacto</h3>
+                <p>Dirección: Crr 4 # 7 - 18</p>
+                <p>Teléfono:3145561404 </p>
+              
+      </div>
+      </div>
+        <div class="formulario-contacto-contenedor">
+        <div class="formulario-contacto">
+        <form action="https://formspree.io/f/xknlazdn" method="POST">
+        <div class="control-formulario">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="sender-name" placeholder="Escribe tu nombre" class="input-field"required/>
+        </div>
+    
+        
+        <div class="control-formulario">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="sender-email" placeholder="Ingreso tu correo electrónico" class="input-field" required/>
+       </div>
+    
+    
+    <div class="control-formulario">
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" cols="60" rows="10" placeholder="Escribe tu mensaje" name="mensaje" class="input-field" required></textarea>
+    </div>
+    
+    <input type="submit" value="Enviar" id="submit-btn" class="submit-btn"/>
+    </form>
+    </div>
+    </div>
+    </section>
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Hotel Nueva Vida. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
